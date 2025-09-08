@@ -1,0 +1,39 @@
+/* Estilos para la página de Galería */
+
+.gallery-container h1 {
+    text-align: center;
+    margin-bottom: 2.5rem; /* Aumentamos el margen para más espacio */
+    font-size: 2.5rem; /* Hacemos el título un poco más grande */
+}
+
+.gallery-grid {
+    display: grid;
+    /* 
+      Crea una grilla responsiva. 'auto-fit' crea tantas columnas como quepan.
+      'minmax(180px, 1fr)' asegura que cada columna tenga un mínimo de 180px,
+      permitiendo que entren hasta 5 columnas en pantallas grandes.
+    */
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem; /* Espacio entre las imágenes */
+}
+
+.gallery-grid a {
+    display: block;
+    overflow: hidden; /* Oculta lo que se salga del contenedor (para el zoom de la imagen) */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    aspect-ratio: 1 / 1; /* Mantiene las imágenes cuadradas */
+}
+
+.gallery-grid a:hover {
+    transform: scale(1.05); /* Agranda ligeramente el contenedor al pasar el mouse */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra el espacio sin deformarse */
+}

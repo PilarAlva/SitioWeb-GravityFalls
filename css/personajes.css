@@ -1,0 +1,28 @@
+/* ------- Página de Personajes -------- */
+#personajes main {
+    display: flex;
+    flex-direction: column;
+}
+
+/* #personajes .info-container {
+    margin-top: 20px;
+} */
+.info-personajes {
+    /* cambiar la distribución de los dos objetos */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    
+}
+.info-personajes .info-container {
+    width: 49%;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#personajes .info-container img {
+    height: 150px;
+    border-radius: 50%;
+}

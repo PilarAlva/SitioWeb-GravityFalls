@@ -1,0 +1,98 @@
+/* Estilos para la página de Contacto */
+/* body{
+    background-image: url('../img/background-diarioChatGPT.png');
+    background-size: cover;
+    background-position: center;
+} */
+
+.contact-section {
+    max-width: 600px;
+    padding: 2rem;
+    background-color: #b1bb9f;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    
+}
+
+.contact-section h1 {
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.contact-section p {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+}
+
+.contact-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: rgb(207, 216, 189); /* <-- Aquí cambias el color de fondo */
+    color: var(--primary-color);       /* <-- Asegura que el texto sea legible */
+    border: 1px solid #696e60;         /* <-- Un borde que combina mejor */
+    border-radius: 10px;
+    font-family: var(--font-main);
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 5px rgba(226, 143, 75, 0.5);
+}
+
+.contact-form textarea {
+    resize: vertical; /* Permite al usuario redimensionar verticalmente */
+}
+
+.submit-btn {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-family: var(--font-headings);
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-btn:hover {
+    background-color: #d17930; /* Un tono más oscuro de --accent-color */
+    transform: translateY(-2px);
+}
+
+/* Estilos para las imágenes en la página de contacto */
+.info-container .info-image {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* Espacio entre las imágenes */
+    justify-content: center; /* Centra las imágenes si el espacio vertical sobra */
+    align-items: center;
+
+}
+
+.info-container .info-image img {
+    width: 80%;
+}
+
