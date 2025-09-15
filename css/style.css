@@ -159,7 +159,9 @@ img {
     opacity: 0;
 }
 
-/* --------- 4. Contenido Principal (Main) --------- */
+
+
+/* --------- 4. Contenido Principal de INDEX (Main - Home) --------- */
 .main-content {
     max-width: 1100px;
     margin: 0 auto;
@@ -187,6 +189,7 @@ img {
 .info-image {
     flex: 1;
 }
+
 .info-image img {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -211,6 +214,15 @@ img {
     object-fit: cover;
     border: 4px solid var(--primary-color);
 }
+
+@media (max-width: 768px) {
+    #img-cabania {
+    width: 70%;
+    height: auto;
+    }
+}
+
+
 
 /* --------- 5. Pie de Página (Footer) --------- */
 .site-footer {
@@ -238,6 +250,8 @@ img {
 .social-icons a:hover img {
     transform: scale(1.2);
 }
+
+
 
 /* --------- 6. Diseño Responsivo (Responsive) --------- */
 @media (max-width: 768px) {
@@ -275,18 +289,6 @@ img {
     .site-footer {
         flex-direction: column;
     }
-    /* .info-personajes {
-        justify-content: center;
-        align-items: center;
-    } FIJARSE EN QUPE TAMAÑO CAMBIA Y EN QUPE TAMAÑO NO Y PORQUÉ*/
 
 }
-/* Ajuste para alinear texto de la trama solo en Desktop */
-@media (min-width: 769px) {
-    #trama .info-container .info-text {
-        align-self: flex-start;
-    }
-
-}
-
 

@@ -26,3 +26,13 @@
     height: 150px;
     border-radius: 50%;
 }
+
+
+/* --------- Diseño Responsivo (Responsive) --------- */
+@media (max-width: 768px) {
+    /* .info-personajes {
+        justify-content: center;
+        align-items: center;
+    } FIJARSE EN QUE TAMAÑO CAMBIA Y EN QUE TAMAÑO NO Y PORQUÉ*/
+
+}

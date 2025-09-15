@@ -25,7 +25,12 @@
     min-width: 0;
 }
 
+/* --------- Diseño Responsivo (Responsive) --------- */
 @media (max-width: 768px) {
+    #trama .info-container .info-text {
+        align-self: flex-start;
+    }
+
     #trama #div-imagenes {
         flex-wrap: wrap;
         /* Centramos las filas de imágenes */
