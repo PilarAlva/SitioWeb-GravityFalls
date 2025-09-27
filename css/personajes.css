@@ -4,35 +4,55 @@
     flex-direction: column;
 }
 
-/* #personajes .info-container {
-    margin-top: 20px;
-} */
+
 .info-personajes {
     /* cambiar la distribución de los dos objetos */
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 20px;
-    
-}
-.info-personajes .info-container {
-    width: 49%;
-    justify-content: center;
-    align-items: center;
+    gap: 2rem 0rem;
 }
 
+.info-personajes .info-container {
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem; /* Se pisa el valor del style.css */
+}
 
 #personajes .info-container img {
     height: 150px;
     border-radius: 50%;
+    margin-left: 1.5rem;
 }
 
+.text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
 
-/* --------- Diseño Responsivo (Responsive) --------- */
+/* --------- Diseño Responsive --------- */
 @media (max-width: 768px) {
-    /* .info-personajes {
-        justify-content: center;
-        align-items: center;
-    } FIJARSE EN QUE TAMAÑO CAMBIA Y EN QUE TAMAÑO NO Y PORQUÉ*/
+    .info-personajes .info-container {
+        justify-content: start;
+        /* align-items: center; */
+    } /* FIJARSE EN QUE TAMAÑO CAMBIA Y EN QUE TAMAÑO NO Y PORQUÉ */
 
+    .info-container p {
+    text-align: center;
+    padding: 0 20px 20px 20px;
+    }
+
+    h3 {
+    display: flex;
+    align-self: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .info-personajes .info-container {
+        width: 100%;
+    }
 }

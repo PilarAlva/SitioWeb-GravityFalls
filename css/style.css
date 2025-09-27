@@ -253,7 +253,7 @@ img {
 
 
 
-/* --------- 6. Diseño Responsivo (Responsive) --------- */
+/* --------- 6. Diseño Responsive --------- */
 @media (max-width: 768px) {
     .info-container {
         flex-direction: column;
@@ -286,6 +286,11 @@ img {
 
     .main-nav a { font-size: 1.2rem; }
     
+    #img-cabania {
+        width: 55%;
+        height: auto;
+    }
+
     .site-footer {
         flex-direction: column;
     }
