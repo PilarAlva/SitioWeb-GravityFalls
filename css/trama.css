@@ -1,6 +1,11 @@
 /* ------------------ Página de Trama ---------------- */
-#trama .info-container {
+/* section {
+    margin-bottom: 50px; 
+} */
+
+#trama {
     padding-bottom: 30px;
+    align-items: start;
 }
 
 #trama #div-imagenes {
@@ -9,50 +14,30 @@
     /* 2. Definimos un espacio entre las imágenes */
     gap: 1rem;
     /* 3. Le damos la altura fija que deseas */
-    
 } 
 
-#trama #div-imagenes img {
-    width: 100%;
-    /* 4. Hacemos que cada imagen intente ocupar el mismo espacio flexiblemente */
-    flex: 1;
-    /* 5. ESTA ES LA CLAVE: Evita que la imagen se deforme.
-       'cover' hace que la imagen llene su espacio asignado, manteniendo la proporción
-       y recortando el exceso. */
-    object-fit: cover;
-    /* 6. Truco importante de Flexbox: Permite que las imágenes se encojan
-       más allá de su tamaño original si es necesario. */
-    min-width: 0;
+#contenedor {
+    margin: 0 20px;
 }
 
 /* --------- Diseño Responsivo (Responsive) --------- */
 @media (max-width: 768px) {
+    #trama {
+        align-items: center;
+    }
     #trama .info-container .info-text {
         align-self: flex-start;
     }
 
-    #trama #div-imagenes {
-        flex-wrap: wrap;
-        /* Centramos las filas de imágenes */
-        justify-content: center;
-        /* La altura se ajusta al contenido en dos filas */
-        height: auto;
-    }
-    #trama #div-imagenes img {
-        /* Evitamos que la imagen en la segunda fila se estire para llenar el espacio */
-        flex-grow: 0;
-    }
-
-    /* Las primeras dos imágenes ocupan la primera fila */
-    #trama #div-imagenes img:nth-child(-n+2) {
-        /* Cada una ocupa la mitad del espacio menos la mitad del 'gap' */
-        flex-basis: calc(40% - 1rem); /* 50% del ancho - (2rem gap / 2) */
-    }
-
-    /* La tercera imagen ocupa la segunda fila */
-    #trama #div-imagenes img:nth-child(3) {
-        /* Le damos un ancho específico para que se vea bien centrada */
-        flex-basis: 40%;
-    }
-
 }
+
+
+
+/* Algunos descartados: 
+    Para evitar que la imagen se estire para llenar el espacio
+    flex-grow: 0;
+
+
+
+
+*/

@@ -121,17 +121,6 @@
 }
 
 
-.destacado {
-    font-weight: bold;
-}
-#cursiva {
-    font-style: italic;
-}
-p {
-    margin-bottom: 1rem;
-}
-
-
 /* -------------------- Diseño Responsive -------------------- */
 @media (max-width: 768px) {
     .info-container {
@@ -150,7 +139,4 @@ p {
     }
 }
 
-@media (max-width: 480px) {
-        
-}
 

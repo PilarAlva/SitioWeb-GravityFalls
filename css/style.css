@@ -39,10 +39,21 @@ a {
     color: var(--accent-color);
 }
 
+p {
+    margin-bottom: 1rem;
+}
+
 img {
     max-width: 100%;
     height: auto;
     display: block;
+}
+
+.destacado {
+    font-weight: bold;
+}
+#cursiva {
+    font-style: italic;
 }
 
 /* --------- 2. Cabecera (Header) --------- */
