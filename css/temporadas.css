@@ -1,0 +1,72 @@
+/* Estilos para las páginas de Temporada */
+
+.season-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.season-header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.season-header p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+    color: var(--text-color);
+}
+
+/* --- Grilla de Episodios --- */
+.episodes-grid {
+    display: grid;
+    /* Crea columnas responsivas: se ajustarán automáticamente.
+       Cada columna tendrá un mínimo de 300px y un máximo de 1fr (fracción del espacio) */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem; /* Espacio entre las tarjetas */
+}
+
+.episode-card {
+    background-color: #fdfaf0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden; /* Asegura que la imagen no se salga de los bordes redondeados */
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.episode-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.episode-info {
+    padding: 1.5rem;
+    flex-grow: 1; /* Permite que esta sección crezca y empuje la imagen hacia abajo */
+}
+
+.episode-info h3 {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    margin-bottom: 0.75rem;
+}
+
+.episode-info p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* --- Contenedor de la Imagen del Episodio --- */
+.episode-image-container {
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Mantiene una proporción de 16:9 */
+    border-top: 1px solid #eee;
+}
+
+.episode-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra el contenedor sin deformarse */
+}
