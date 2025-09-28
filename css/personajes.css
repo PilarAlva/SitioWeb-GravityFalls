@@ -1,4 +1,8 @@
 /* ------- Página de Personajes -------- */
+h1 {
+    margin-bottom: 2rem;
+}
+
 #personajes main {
     display: flex;
     flex-direction: column;
