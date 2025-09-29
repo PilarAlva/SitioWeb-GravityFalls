@@ -70,3 +70,38 @@
     height: 100%;
     object-fit: cover; /* Asegura que la imagen cubra el contenedor sin deformarse */
 }
+
+/* --- Botones de Navegación de Temporada --- */
+.season-nav-buttons {
+    display: flex;
+    justify-content: space-between; /* Centra los botones en la página */
+    gap: 1.5rem; /* Espacio entre los botones */
+    margin-top: 3rem; /* Espacio por encima de los botones */
+    padding-bottom: 1rem; /* Espacio extra al final de la página */
+}
+
+.season-nav-buttons .btn {
+    display: flex;
+    align-items: center; /* Clave para alinear verticalmente la imagen y el texto */
+    gap: 0.75rem; /* Espacio entre la imagen y el texto */
+    padding: 0.8rem 1.5rem;
+    background-color: #5a615d;
+    color: white;
+    font-family: var(--font-headings);
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 25px; /* Bordes redondeados para un look de píldora */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.season-nav-buttons .btn img {
+    height: 1em; /* La imagen tendrá la altura del texto del botón */
+    width: auto;
+}
+
+.season-nav-buttons .btn:hover {
+    background-color: #d17930; /* Un tono más oscuro de --accent-color */
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
