@@ -116,6 +116,43 @@ img {
     width: 100%;
 }
 
+/* --------- 3.1. Menú Desplegable (Dropdown) --------- */
+.main-nav .dropdown {
+    position: relative;
+    top: -2px; /* Sube ligeramente todo el elemento 'Serie' para alinearlo */
+}
+
+.main-nav .arrow-down {
+    font-size: 1.2em;
+    display: inline-block;
+    transform: rotate(90deg);
+    transition: transform 0.3s ease;
+    position: relative; /* Volvemos a relativo para que esté dentro del flujo */
+    top: 2px; /* Pequeño ajuste vertical */
+    margin-left: 0.4rem; /* Espacio entre el texto y la flecha */
+}
+
+.main-nav .dropdown-content {
+    display: none; /* Oculto por defecto */
+    position: absolute;
+    background-color: var(--primary-color);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    list-style: none; /* Quita los puntos de la lista */
+    padding: 0.5rem 0;
+    padding-top: 1rem; /* Añade espacio arriba DENTRO del menú, sin crear un hueco */
+    border-radius: 4px;
+    left: 0; /* Alinea el desplegable con el inicio del texto 'Serie' */
+}
+
+.main-nav .dropdown-content a {
+    padding: 0.75rem 1.5rem;
+    display: block; /* Ocupa todo el ancho del contenedor */
+    text-align: left;
+}
+
+
 /* --------- 3. Menú Hamburguesa --------- */
 .hamburger-menu {
     display: none; /* Oculto en desktop */
@@ -266,6 +303,11 @@ img {
 
 /* --------- 6. Diseño Responsive --------- */
 @media (max-width: 768px) {
+    /* Muestra el desplegable en móvil de forma permanente */
+    .main-nav .dropdown-content {
+        display: block;
+    }
+
     .info-container {
         flex-direction: column;
         gap: 1.5rem;
@@ -291,12 +333,35 @@ img {
 
     .main-nav ul {
         flex-direction: column;
-        align-items: center;
+        align-items: center; /* Esto ya centra los elementos principales */
         gap: 2rem;
     }
 
     .main-nav a { font-size: 1.2rem; }
+
+    /* Estilos para el desplegable en móvil */
+    .main-nav .dropdown {
+        text-align: center;
+    }
+    .main-nav .dropdown-content {
+        position: static; /* Anula el posicionamiento absoluto */
+        box-shadow: none;
+        background-color: transparent;
+        padding: 0;
+        margin-top: 1rem;
+    }
+    .main-nav .dropdown-content a {
+        font-size: 1rem;
+        padding: 0.25rem 0; /* Eliminamos el padding horizontal */
+        display: inline-block; /* Hace que el contenedor se ajuste al texto */
+        text-align: center; /* Forzamos el centrado del texto */
+    }
     
+    /* Oculta la flecha del desplegable en la vista móvil */
+    .main-nav .arrow-down {
+        display: none;
+    }
+
     #img-cabania {
         width: 55%;
         height: auto;
@@ -308,3 +373,14 @@ img {
 
 }
 
+/* Solo para desktop: Lógica de hover */
+@media (min-width: 769px) {
+    /* Muestra el desplegable al pasar el cursor sobre el elemento li */
+    .main-nav .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    /* Gira la flecha hacia arriba cuando el menú está abierto */
+    .main-nav .dropdown:hover .arrow-down {
+        transform: rotate(-90deg);
+    }
+}
