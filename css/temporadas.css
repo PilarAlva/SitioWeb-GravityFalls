@@ -5,9 +5,10 @@
     margin-bottom: 2rem;
 }
 
-.season-header h1 {
-    font-size: 2.8rem;
-    margin-bottom: 0.5rem;
+h1 {
+    text-align: center;
+    margin-bottom: 2.5rem; /* Aumentamos el margen para más espacio */
+    font-size: 2.5rem; /* Hacemos el título un poco más grande */
 }
 
 .season-header p {
@@ -45,6 +46,8 @@
 .episode-info {
     padding: 1.5rem;
     flex-grow: 1; /* Permite que esta sección crezca y empuje la imagen hacia abajo */
+    display: flex;
+    flex-direction: column;
 }
 
 .episode-info h3 {
@@ -56,6 +59,7 @@
 .episode-info p {
     font-size: 0.95rem;
     line-height: 1.5;
+    margin-bottom: 0px;
 }
 
 /* --- Contenedor de la Imagen del Episodio --- */

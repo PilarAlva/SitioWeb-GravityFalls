@@ -30,8 +30,7 @@
 .temporada-card {
     /* --- Contenedor y Dimensiones --- */
     flex: 1; /* Ocupa el espacio disponible */
-    min-height: 450px; /* Altura mínima para la tarjeta */
-    padding: 2rem;
+    min-height: 400px; /* Altura mínima reducida */
     border-radius: 10px;
     overflow: hidden; /* Asegura que el contenido no se salga */
     position: relative; /* Necesario para la capa oscura */
@@ -40,7 +39,7 @@
     display: flex;
     flex-direction: column;
     justify-content: start;
-    align-items: center;
+    align-items: center; /* Centra el contenido horizontalmente (aunque con width 100% no se nota) */
     text-align: center;
 
     /* --- Estilos de Texto --- */
@@ -63,18 +62,27 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Capa oscura. Ajusta el 0.6 para más o menos oscuridad */
+    background-color: rgba(0, 0, 0, 0.55); /* Capa oscura. Ajusta el 0.6 para más o menos oscuridad */
     z-index: 1; /* Se pone entre el fondo y el texto */
 }
 
-.temporada-card h2, .temporada-card p, .temporada-card h3 {
+.temporada-card h2, .temporada-card h3 {
     position: relative;
     z-index: 2; /* Pone el texto por encima de la capa oscura */
     color: white; /* Asegura que el texto sea blanco */
+    margin-top: 1rem;
+}
+
+.temporada-card-content {
+    position: relative;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo más oscuro para el contenedor del texto */
+    width: 100%; /* Ocupa todo el ancho de la tarjeta */
+    margin-top: 2rem;
 }
 
 #temporada-1 {
-    background: url('../img/fondo-temporada1.jpg') no-repeat center center/cover;
+    background: url('../img/Gravity_Falls-primera-tempo.webp') no-repeat center center/cover;
 }
 
 #temporada-2 {

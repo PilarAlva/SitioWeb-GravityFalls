@@ -1,6 +1,8 @@
 /* ------- Página de Personajes -------- */
 h1 {
-    margin-bottom: 2rem;
+    text-align: center;
+    margin-bottom: 3rem; /* Aumentamos el margen para más espacio */
+    font-size: 2.5rem; /* Hacemos el título un poco más grande */
 }
 
 #personajes main {
